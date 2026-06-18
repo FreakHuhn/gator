@@ -4,9 +4,11 @@ import (
 	"fmt"
 
 	"github.com/FreakHuhn/gator/internal/config"
+)
 
 func main() {
-	config.Read()
-	config.SetUser()
-	fmt.Println(config.Read())
+	cfg := config.Read()
+	cfg.SetUser("FreakHuhn")
+	cfg = config.Read()
+	fmt.Println(cfg)
 }
