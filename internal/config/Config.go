@@ -10,7 +10,6 @@ type Config struct {
 	Current_user_name string `json:"current_user_name"`
 }
 
-// writes the config struct to the JSON file after setting the current_user_name field.
 func(c Config) SetUser(name string) {
 	c.Current_user_name = name
 	homeLocation, err := os.UserHomeDir()
